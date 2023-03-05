@@ -34,7 +34,7 @@ export default function Navbar() {
 
     const postItem = async (data) => {
         try {
-            const res = await axios.post("http://localhost:8080/inventory",
+            const res = await axios.post("https://digital-crew-assignment-a8ld.vercel.app/inventory",
             data,
             );
             dispatch(postInventoryData(res.data.data));

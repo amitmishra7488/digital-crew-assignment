@@ -10,7 +10,7 @@ export default function InventoryDetails() {
     const { id } = useParams();
     const display = async () => {
         try {
-            const res = await axios.get(`http://localhost:8080/inventory/${id}`);
+            const res = await axios.get(`https://digital-crew-assignment-a8ld.vercel.app/inventory/${id}`);
             setData(res.data.data);
         } catch (error) {
             console.log(error);

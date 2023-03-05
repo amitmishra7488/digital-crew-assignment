@@ -42,7 +42,7 @@ export default function InventoryCard() {
 
     // const updateItem = async (data, id) => {
     //     try {
-    //         const res = await axios.put(`http://localhost:8080/inventory/${id}`,
+    //         const res = await axios.put(`https://digital-crew-assignment-a8ld.vercel.app/inventory/${id}`,
     //             data,
     //         );
     //         console.log(res.data.data);
@@ -60,7 +60,7 @@ export default function InventoryCard() {
 
     const display = async () => {
         try {
-            const res = await axios.get("http://localhost:8080/inventory");
+            const res = await axios.get("https://digital-crew-assignment-a8ld.vercel.app/inventory");
             dispatch(fetchInventoryData(res.data.data));
 
         } catch (error) {
@@ -73,7 +73,7 @@ export default function InventoryCard() {
     
     const handleDelete = async (id) => {
         try {
-            const res = await axios.delete(`http://localhost:8080/inventory/${id}`);
+            const res = await axios.delete(`https://digital-crew-assignment-a8ld.vercel.app/inventory/${id}`);
             dispatch(deleteInventoryData(id));
         } catch (error) {
             console.log(error);
