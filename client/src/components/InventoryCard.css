@@ -1,0 +1,104 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3%;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card>img {
+    width: 100%;
+    max-height: 100px;
+}
+
+.card>img {
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.card-price {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.card-buttons {
+    display: flex;
+}
+
+.edit-button,
+.delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #555;
+}
+
+.edit-button:focus,
+.delete-button:focus {
+    outline: none;
+}
+
+.edit-button svg,
+.delete-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        width: 90%;
+        padding: 10px;
+
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        gap: 10px;
+        padding: 10px;
+
+    }
+}
